@@ -1,0 +1,14 @@
+.container {
+    .card {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        mat-card-title {
+            margin: 10px;
+        }
+
+        .image {
+            width: 90px;
+        }
+    }
+}
