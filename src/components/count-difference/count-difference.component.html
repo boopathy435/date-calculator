@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="title">Date Difference</div>
+    <date-form [fromToDateLabels]="formLabels" [form]="dateForm"></date-form>
+    <button mat-raised-button color="primary" (click)="calculateDifference()">Calculate</button>
+    <div class="result" *ngIf="result">
+        <span class="label">Difference is</span>
+        <mat-grid-list cols="1" rowHeight="50px">
+            <mat-grid-tile>{{differenceInSeconds | datestring:'second'}}</mat-grid-tile>
+            <mat-grid-tile>{{differenceInMinutes | datestring:'minute'}}</mat-grid-tile>
+            <mat-grid-tile>{{differenceInHours | datestring:'hour'}}</mat-grid-tile>
+            <mat-grid-tile>{{differenceInDays | datestring:'day'}}</mat-grid-tile>
+            <mat-grid-tile>{{differenceInWeeks | datestring:'week'}}</mat-grid-tile>
+            <mat-grid-tile>{{differenceInMonths | datestring:'month'}}</mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>

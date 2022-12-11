@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AgeCalculationComponent } from '../';
+import { MenuItem } from '../../model';
 
 @Component({
   selector: 'date-menu-items',
@@ -8,7 +8,15 @@ import { AgeCalculationComponent } from '../';
 })
 export class MenuItemsComponent {
 
-  menuItems=[{
-    title: 'Age Calculator',component: AgeCalculationComponent
-  }];
+  menuItems: MenuItem[] = [{
+    title: 'Age Calculator',
+    routeUrl: "/age-calculator",
+    imageUrl: "https://mahabharti.in/wp-content/uploads/2022/03/Age-Calculator-Live.jpg"
+  },
+  {
+    title: 'Count days',
+    routeUrl: "/count-days",
+    imageUrl: "https://media.tenor.com/q8OcRUR7N6kAAAAj/countdown.gif"
+  }
+];
 }

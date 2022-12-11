@@ -1,16 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { differenceInMilliseconds } from 'date-fns';
-import differenceInYears from 'date-fns/differenceInYears';
 import { millisecondToTime } from 'src/Utils/date-functions';
-
-type AgeResponse = {
-  year: string,
-  month: string,
-  day: string
-}
-
-
 
 @Component({
   selector: 'date-age-calculation',
@@ -19,10 +10,9 @@ type AgeResponse = {
 })
 export class AgeCalculationComponent {
   dateForm!: FormGroup;
-  age!: AgeResponse;
   year!: number;
   result = '';
-
+  formLabels = ['Date of birth','To day'];
 
   constructor(private formBuilder: FormBuilder) {
     this.dateForm = this.formBuilder.group({

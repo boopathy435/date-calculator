@@ -20,3 +20,12 @@ export function millisecondToTime(input: number) {
 
     return { year, month, day, hour, minute, second };
 }
+
+export function getString(count: number, word: string): string {
+    const result = `${count} ${word}`;
+    if (count === 1) {
+        return result;
+    } else {
+        return result + 's';
+    }
+}

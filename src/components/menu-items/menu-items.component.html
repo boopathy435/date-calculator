@@ -1,8 +1,12 @@
 <div class="container">
-    <mat-card *ngFor="let item of menuItems" class="card">
-        <mat-card-title>{{item.title}}</mat-card-title>
-        <mat-card-content>
-            <img class="image" src="https://mahabharti.in/wp-content/uploads/2022/03/Age-Calculator-Live.jpg">
-        </mat-card-content>
-    </mat-card>
+    <mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let item of menuItems">
+            <mat-card class="card" [routerLink]="item.routeUrl">
+                <mat-card-title>{{item.title}}</mat-card-title>
+                <mat-card-content>
+                    <img class="image" [src]="item.imageUrl">
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
 </div>

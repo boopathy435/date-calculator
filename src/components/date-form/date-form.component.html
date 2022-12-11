@@ -1,0 +1,19 @@
+<div [formGroup]="dateForm" class="date-field">
+
+    <mat-form-field appearance="fill">
+        <mat-label>{{fromDateLabel}}</mat-label>
+        <input matInput [matDatepicker]="picker" name="formDate" formControlName="fromDate">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>{{toDateLabel}}</mat-label>
+        <input matInput [matDatepicker]="picker1" name="toDate" formControlName="toDate">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+</div>
